@@ -213,3 +213,13 @@ ORDER BY c.conname
   [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
   [1m[35mChallenge Load (0.8ms)[0m  SELECT "challenges".* FROM "challenges"
   [1m[36mPledge Load (0.7ms)[0m  [1mSELECT "pledges".* FROM "pledges"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mChallenge Load (0.9ms)[0m  SELECT "challenges".* FROM "challenges"
+  [1m[36mPledge Load (0.8ms)[0m  [1mSELECT "pledges".* FROM "pledges"[0m
+
+
+Started GET "/" for ::1 at 2015-02-07 15:32:09 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendered pages/home.haml (2.9ms)
+Completed 200 OK in 87ms (Views: 59.9ms | ActiveRecord: 0.0ms)
