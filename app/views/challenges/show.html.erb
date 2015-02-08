@@ -1,2 +1,12 @@
-<h1>Challenges#show</h1>
-<p>Find me in app/views/challenges/show.html.erb</p>
+<h1><%= @challenge.title %></h1>
+<p>
+  <%= link_to 'Edit Challenge', edit_challenge_path(@challenge) %>
+  |
+  <%= link_to 'Delete Challenge', @challenge, :method => 'delete', :data => { :confirm => "Are you sure?" } %>
+</p>
+<div>
+  <!-- need to add user_id.name here -->
+  <p><strong><%= @challenge.description %></p>
+</div>
+
+<%= image_tag(@challenge.banner_image, :class => 'challenge') %>

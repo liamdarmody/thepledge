@@ -3247,3 +3247,969 @@ Processing by SessionController#new as HTML
   [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 16]]
   Rendered session/new.haml within layouts/application (1.9ms)
 Completed 200 OK in 43ms (Views: 38.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-02-08 17:08:44 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  Rendered pages/home.haml within layouts/application (1.1ms)
+Completed 200 OK in 140ms (Views: 123.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/login" for ::1 at 2015-02-08 17:08:46 +1100
+Processing by SessionController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 16]]
+  Rendered session/new.haml within layouts/application (2.3ms)
+Completed 200 OK in 217ms (Views: 213.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-02-08 17:08:48 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  Rendered pages/home.haml within layouts/application (0.1ms)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2015-02-08 17:08:53 +1100
+Processing by SessionController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 16]]
+  Rendered session/new.haml within layouts/application (0.8ms)
+Completed 200 OK in 34ms (Views: 29.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for ::1 at 2015-02-08 17:09:11 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uih8T+PUxMtkqbXw0WG7z0tOLSleYeJ5A/UiZoySM64J8a9AqLxCQGxg5FT2RDPC8s2GICrBpmx6R3jIhTmEHA==", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "admin@admin.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 73ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-02-08 17:09:11 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 18]]
+  Rendered pages/home.haml within layouts/application (0.1ms)
+Completed 200 OK in 73ms (Views: 68.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2015-02-08 17:09:13 +1100
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.haml within layouts/application (5.7ms)
+Completed 200 OK in 80ms (Views: 75.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-02-08 18:06:32 +1100
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 18]]
+  Rendered pages/home.haml within layouts/application (1.1ms)
+Completed 200 OK in 142ms (Views: 125.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-02-08 20:42:34 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 18]]
+  Rendered pages/home.haml within layouts/application (0.2ms)
+Completed 200 OK in 310ms (Views: 130.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for ::1 at 2015-02-08 21:02:39 +1100
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 18]]
+  Rendered pages/home.haml within layouts/application (0.6ms)
+Completed 200 OK in 215ms (Views: 119.4ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/" for ::1 at 2015-02-08 21:03:01 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 18]]
+  Rendered pages/home.haml within layouts/application (0.2ms)
+Completed 200 OK in 114ms (Views: 60.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/challenges/new" for ::1 at 2015-02-08 21:03:03 +1100
+Processing by ChallengesController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 18]]
+  Rendered challenges/_form.html.erb (449.9ms)
+  Rendered challenges/new.html.erb within layouts/application (971.3ms)
+Completed 500  in 1051ms
+
+NoMethodError - undefined method `days' for #<Challenge:0x007fc606532c70>:
+  activemodel (4.2.0) lib/active_model/attribute_methods.rb:433:in `method_missing'
+  actionview (4.2.0) lib/action_view/helpers/tags/base.rb:28:in `value'
+  actionview (4.2.0) lib/action_view/helpers/tags/base.rb:37:in `value_before_type_cast'
+  actionview (4.2.0) lib/action_view/helpers/tags/text_field.rb:13:in `block in render'
+  actionview (4.2.0) lib/action_view/helpers/tags/text_field.rb:13:in `render'
+  actionview (4.2.0) lib/action_view/helpers/form_helper.rb:787:in `text_field'
+  actionview (4.2.0) lib/action_view/helpers/form_helper.rb:1322:in `text_field'
+   () Users/liamdarmody/Projects/wdi/projects/thepledge/app/views/challenges/_form.html.erb:26:in `block in _app_views_challenges__form_html_erb___1570658849885465725_70244217233220'
+  actionview (4.2.0) lib/action_view/helpers/capture_helper.rb:38:in `block in capture'
+  actionview (4.2.0) lib/action_view/helpers/capture_helper.rb:200:in `with_output_buffer'
+  haml (4.0.6) lib/haml/helpers/action_view_xss_mods.rb:5:in `with_output_buffer_with_haml_xss'
+  actionview (4.2.0) lib/action_view/helpers/capture_helper.rb:38:in `capture'
+  haml (4.0.6) lib/haml/helpers/action_view_mods.rb:52:in `capture_with_haml'
+  actionview (4.2.0) lib/action_view/helpers/form_helper.rb:444:in `form_for'
+  haml (4.0.6) lib/haml/helpers/action_view_mods.rb:139:in `form_for_with_haml'
+  haml (4.0.6) lib/haml/helpers/action_view_xss_mods.rb:28:in `form_for_with_haml_xss'
+   () Users/liamdarmody/Projects/wdi/projects/thepledge/app/views/challenges/_form.html.erb:1:in `_app_views_challenges__form_html_erb___1570658849885465725_70244217233220'
+  actionview (4.2.0) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.0) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.0) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.0) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.0) lib/action_view/renderer/partial_renderer.rb:339:in `render_partial'
+  actionview (4.2.0) lib/action_view/renderer/partial_renderer.rb:310:in `block in render'
+  actionview (4.2.0) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.0) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.0) lib/action_view/renderer/partial_renderer.rb:309:in `render'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:47:in `render_partial'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:21:in `render'
+  actionview (4.2.0) lib/action_view/helpers/rendering_helper.rb:32:in `render'
+  haml (4.0.6) lib/haml/helpers/action_view_mods.rb:12:in `render_with_haml'
+   () Users/liamdarmody/Projects/wdi/projects/thepledge/app/views/challenges/new.html.erb:2:in `_app_views_challenges_new_html_erb__3767473426787116427_70244217117060'
+  actionview (4.2.0) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.0) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.0) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.0) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.0) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.0) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.0) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.0) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.0) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.0) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+   () Users/liamdarmody/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/headers.rb:16:in `call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+   () Users/liamdarmody/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+   () Users/liamdarmody/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+   () Users/liamdarmody/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/1e741831efe39b03/variables" for ::1 at 2015-02-08 21:03:05 +1100
+
+
+Started POST "/__better_errors/1e741831efe39b03/variables" for ::1 at 2015-02-08 21:03:19 +1100
+
+
+Started GET "/challenges/new" for ::1 at 2015-02-08 21:04:00 +1100
+Processing by ChallengesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 18]]
+  Rendered challenges/_form.html.erb (4.9ms)
+  Rendered challenges/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 69ms (Views: 63.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2015-02-08 21:04:08 +1100
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.haml within layouts/application (5.0ms)
+Completed 200 OK in 90ms (Views: 84.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/login" for ::1 at 2015-02-08 21:04:10 +1100
+Processing by SessionController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 18]]
+  Rendered session/new.haml within layouts/application (4.0ms)
+Completed 200 OK in 83ms (Views: 78.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/challenges/new" for ::1 at 2015-02-08 21:04:12 +1100
+Processing by ChallengesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 18]]
+  Rendered challenges/_form.html.erb (4.3ms)
+  Rendered challenges/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 52ms (Views: 46.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/challenges" for ::1 at 2015-02-08 21:05:29 +1100
+Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zzqXzkjLz3FaEwvBJBJ9hw1+pWlgNTLqWENZsmeZaIWU40TBA6NJ+lLaWmUDN/WKtP0OYBSVdv8h8QMcbjLfNw==", "challenge"=>{"title"=>"Test Challenge", "description"=>"Quick test", "nominee_name"=>"Testman", "nominee_email"=>"test@test.com", "banner_image"=>"http://www.thelovepack.org/wp-content/uploads/2013/11/AirGuitar2.jpg", "cause"=>"Make a Wish Foundation", "target"=>"200"}, "commit"=>"Create Challenge"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "challenges" ("title", "description", "nominee_name", "nominee_email", "banner_image", "cause", "target", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["title", "Test Challenge"], ["description", "Quick test"], ["nominee_name", "Testman"], ["nominee_email", "test@test.com"], ["banner_image", "http://www.thelovepack.org/wp-content/uploads/2013/11/AirGuitar2.jpg"], ["cause", "Make a Wish Foundation"], ["target", "200"], ["created_at", "2015-02-08 10:05:29.580455"], ["updated_at", "2015-02-08 10:05:29.580455"]]
+  [1m[36m (28.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/challenges/5
+Completed 302 Found in 49ms (ActiveRecord: 30.1ms)
+
+
+Started GET "/challenges/5" for ::1 at 2015-02-08 21:05:29 +1100
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mChallenge Load (43.2ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered challenges/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 442ms (Views: 391.8ms | ActiveRecord: 43.5ms)
+
+
+Started GET "/challenges/5/edit" for ::1 at 2015-02-08 21:05:38 +1100
+Processing by ChallengesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mChallenge Load (0.4ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered challenges/_form.html.erb (5.5ms)
+  Rendered challenges/edit.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 82ms (Views: 76.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/challenges/5" for ::1 at 2015-02-08 21:05:42 +1100
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mChallenge Load (0.6ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered challenges/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 61ms (Views: 54.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/challenges/5" for ::1 at 2015-02-08 21:05:47 +1100
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mChallenge Load (0.5ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered challenges/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 34ms (Views: 27.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/challenges/5" for ::1 at 2015-02-08 21:05:48 +1100
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mChallenge Load (0.6ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered challenges/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 31ms (Views: 23.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/challenges/5" for ::1 at 2015-02-08 21:08:41 +1100
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mChallenge Load (0.5ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered challenges/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 118ms (Views: 111.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/challenges/5" for ::1 at 2015-02-08 21:08:43 +1100
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mChallenge Load (0.3ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered challenges/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 26.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/challenges/5" for ::1 at 2015-02-08 21:08:48 +1100
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mChallenge Load (0.3ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered challenges/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 37ms (Views: 30.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/challenges/5/edit" for ::1 at 2015-02-08 21:08:52 +1100
+Processing by ChallengesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mChallenge Load (0.3ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered challenges/_form.html.erb (4.6ms)
+  Rendered challenges/edit.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 59ms (Views: 51.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/challenges/5" for ::1 at 2015-02-08 21:08:57 +1100
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mChallenge Load (0.3ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered challenges/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 22.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/challenges/5" for ::1 at 2015-02-08 21:08:58 +1100
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mChallenge Load (0.4ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered challenges/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 23.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/challenges/5" for ::1 at 2015-02-08 21:08:59 +1100
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mChallenge Load (13.0ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered challenges/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 56ms (Views: 31.9ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/login" for ::1 at 2015-02-08 21:09:03 +1100
+Processing by SessionController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 18]]
+  Rendered session/new.haml within layouts/application (1.2ms)
+Completed 200 OK in 60ms (Views: 56.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for ::1 at 2015-02-08 21:09:13 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VNCZwtFF9UEgmsdJRjP09mQK+fAAGwhZF1Zd6gGWsYoPCUrNmi1zyihTlu1hFnz73YlS+XS7TExu5AdECD0GOA==", "email"=>"joel@joel.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 18]]
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "joel@joel.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 87ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/" for ::1 at 2015-02-08 21:09:13 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  Rendered pages/home.haml within layouts/application (0.2ms)
+Completed 200 OK in 55ms (Views: 51.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/challenges/new" for ::1 at 2015-02-08 21:09:18 +1100
+Processing by ChallengesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 16]]
+  Rendered challenges/_form.html.erb (2.8ms)
+  Rendered challenges/new.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 57ms (Views: 50.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/challenges" for ::1 at 2015-02-08 21:10:17 +1100
+Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lyGO1aVcA8mu5Pz1cXdqP8iDUGQypGGPGKlzBnNb+Q3M+F3a7jSFQqYtrVFWUuIycQD7bUYEJZphGymoevBOvw==", "challenge"=>{"title"=>"Air Guitar", "description"=>"Quick test challenge", "nominee_name"=>"Craigsy", "nominee_email"=>"craigsy@craigsy.com", "banner_image"=>"http://www.thelovepack.org/wp-content/uploads/2013/11/AirGuitar2.jpg", "cause"=>"Kid Coding", "target"=>"200"}, "commit"=>"Create Challenge"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "challenges" ("title", "description", "nominee_name", "nominee_email", "banner_image", "cause", "target", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Air Guitar"], ["description", "Quick test challenge"], ["nominee_name", "Craigsy"], ["nominee_email", "craigsy@craigsy.com"], ["banner_image", "http://www.thelovepack.org/wp-content/uploads/2013/11/AirGuitar2.jpg"], ["cause", "Kid Coding"], ["target", "200"], ["created_at", "2015-02-08 10:10:17.561761"], ["updated_at", "2015-02-08 10:10:17.561761"]]
+  [1m[35m (50.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/challenges/6
+Completed 302 Found in 68ms (ActiveRecord: 51.4ms)
+
+
+Started GET "/challenges/6" for ::1 at 2015-02-08 21:10:17 +1100
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1  [["id", 6]]
+  Rendered challenges/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 214ms (Views: 204.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/challenges/6/edit" for ::1 at 2015-02-08 21:10:24 +1100
+Processing by ChallengesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mChallenge Load (0.3ms)[0m  SELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1  [["id", 6]]
+  Rendered challenges/_form.html.erb (4.6ms)
+  Rendered challenges/edit.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 105ms (Views: 98.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/challenges/6" for ::1 at 2015-02-08 21:10:30 +1100
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mChallenge Load (0.4ms)[0m  SELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1  [["id", 6]]
+  Rendered challenges/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 63ms (Views: 54.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/challenges/6" for ::1 at 2015-02-08 21:10:32 +1100
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mChallenge Load (0.2ms)[0m  SELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1  [["id", 6]]
+  Rendered challenges/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 38ms (Views: 32.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/challenges/6" for ::1 at 2015-02-08 21:10:32 +1100
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mChallenge Load (0.4ms)[0m  SELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1  [["id", 6]]
+  Rendered challenges/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 46ms (Views: 38.3ms | ActiveRecord: 0.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'challenges'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'pledges'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 15]]
+  [1m[36m (15.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 17]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 18]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mChallenge Load (0.8ms)[0m  [1mSELECT "challenges".* FROM "challenges"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "challenges" WHERE "challenges"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "challenges" WHERE "challenges"."id" = $1  [["id", 5]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "challenges" WHERE "challenges"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mPledge Load (0.9ms)[0m  [1mSELECT "pledges".* FROM "pledges"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "pledges" WHERE "pledges"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'Liam' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Liam"], ["email", "liamdarmody@gmail.com"], ["password_digest", "$2a$10$TBghfhl5nMpLz3GieC30QeiNVP78/FpL8ZNxLLbhkbpXt7wyv3l2e"], ["created_at", "2015-02-08 10:15:17.129233"], ["updated_at", "2015-02-08 10:15:17.129233"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'Joel' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Joel"], ["email", "joel@joel.com"], ["password_digest", "$2a$10$d1ru/olhmmjj16wWS/PGtecKYp8JR3eQkkhQynC9XXMsaNvzO.DOu"], ["created_at", "2015-02-08 10:15:17.202348"], ["updated_at", "2015-02-08 10:15:17.202348"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'John' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "John"], ["email", "john@john.com"], ["password_digest", "$2a$10$MIBl6gEpLG5sUJJ8W97Qcu/Tfy9fV0CPTgMij7tqARfoBNCd6c4ye"], ["created_at", "2015-02-08 10:15:17.321126"], ["updated_at", "2015-02-08 10:15:17.321126"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'admin' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "admin"], ["email", "admin@admin.com"], ["password_digest", "$2a$10$YX1lcp6dI72eimJNs1hRcul9Vzx8A16CCEZWsCgFmEzEw9CZTRMEy"], ["is_admin", "t"], ["created_at", "2015-02-08 10:15:17.392641"], ["updated_at", "2015-02-08 10:15:17.392641"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "challenges" ("title", "description", "nominee_name", "nominee_email", "banner_image", "cause", "target", "published", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["title", "Air Guitar Challenge"], ["description", "The air guitar challenge is a fundraising activity involving filming your best air guitar rendition and uploading it to youtube/ facebook to encourage donations for a worthy cause. Don’t be shy, give us your most rocking performance and tell us why you think this is a worthy cause! Once you’ve completed the activity, feel free to invite others to accept the challenge!"], ["nominee_name", "Joel Turnbull"], ["nominee_email", "joel@joel.com"], ["banner_image", "http://3.bp.blogspot.com/_UgJT7XB2G0Y/S9yVCSbPB5I/AAAAAAAANQo/6IE2tnl9QUY/s1600/family+guy5+800x600.jpg"], ["cause", "Code Club Australia"], ["target", "500"], ["published", "t"], ["created_at", "2015-02-08 10:15:17.399473"], ["updated_at", "2015-02-08 10:15:17.399473"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "pledges" ("amount", "reason", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["amount", 50], ["reason", "To see Joel do air guitar."], ["created_at", "2015-02-08 10:15:17.405997"], ["updated_at", "2015-02-08 10:15:17.405997"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "challenges" SET "user_id" = $1, "updated_at" = $2 WHERE "challenges"."id" = $3  [["user_id", 19], ["updated_at", "2015-02-08 10:15:17.416197"], ["id", 7]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pledges" SET "user_id" = $1, "updated_at" = $2 WHERE "pledges"."id" = $3[0m  [["user_id", 19], ["updated_at", "2015-02-08 10:15:17.446130"], ["id", 5]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pledges" SET "challenge_id" = $1, "updated_at" = $2 WHERE "pledges"."id" = $3  [["challenge_id", 7], ["updated_at", "2015-02-08 10:15:17.451301"], ["id", 5]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for ::1 at 2015-02-08 21:15:55 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 16]]
+  Rendered pages/home.haml within layouts/application (2.7ms)
+Completed 200 OK in 291ms (Views: 172.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2015-02-08 21:18:07 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendered /Users/liamdarmody/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (3.0ms)
+  Rendered /Users/liamdarmody/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (4.3ms)
+  Rendered /Users/liamdarmody/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (82.6ms)
+Completed 200 OK in 191ms (Views: 189.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-02-08 21:19:16 +1100
+Processing by PagesController#home as HTML
+  Rendered pages/home.haml within layouts/application (0.1ms)
+Completed 200 OK in 87ms (Views: 86.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-02-08 21:23:05 +1100
+Processing by PagesController#home as HTML
+  Rendered pages/home.haml within layouts/application (0.2ms)
+Completed 200 OK in 91ms (Views: 90.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-02-08 21:23:06 +1100
+Processing by PagesController#home as HTML
+  Rendered pages/home.haml within layouts/application (0.1ms)
+Completed 200 OK in 166ms (Views: 165.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-02-08 21:23:28 +1100
+Processing by PagesController#home as HTML
+  Rendered pages/home.haml within layouts/application (0.2ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/challenges" for ::1 at 2015-02-08 21:23:56 +1100
+Processing by ChallengesController#index as HTML
+  [1m[36mChallenge Load (1.4ms)[0m  [1mSELECT "challenges".* FROM "challenges"[0m
+  Rendered challenges/index.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 111ms (Views: 97.5ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/challenges/7" for ::1 at 2015-02-08 21:24:01 +1100
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1  [["id", 7]]
+  Rendered challenges/show.html.erb within layouts/application (31.6ms)
+Completed 500  in 48ms
+
+NoMethodError - undefined method `name' for 19:Fixnum:
+   () Users/liamdarmody/Projects/wdi/projects/thepledge/app/views/challenges/show.html.erb:9:in `_app_views_challenges_show_html_erb__2128049067987074242_70270178070400'
+  actionview (4.2.0) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.0) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.0) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.0) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.0) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.0) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.0) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.0) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.0) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.0) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+   () Users/liamdarmody/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/headers.rb:16:in `call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+   () Users/liamdarmody/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+   () Users/liamdarmody/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+   () Users/liamdarmody/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/a7a45de427e7c8ef/variables" for ::1 at 2015-02-08 21:24:01 +1100
+
+
+Started GET "/challenges/7" for ::1 at 2015-02-08 21:27:30 +1100
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mChallenge Load (0.5ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered challenges/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 78ms (Views: 73.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for ::1 at 2015-02-08 21:27:39 +1100
+Processing by UsersController#new as HTML
+  Rendered users/new.haml within layouts/application (201.2ms)
+Completed 200 OK in 258ms (Views: 229.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/login" for ::1 at 2015-02-08 21:27:41 +1100
+Processing by SessionController#new as HTML
+  Rendered session/new.haml within layouts/application (2.1ms)
+Completed 200 OK in 66ms (Views: 64.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/challenges/new" for ::1 at 2015-02-08 21:27:44 +1100
+Processing by ChallengesController#new as HTML
+  Rendered challenges/_form.html.erb (12.0ms)
+  Rendered challenges/new.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 75ms (Views: 74.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/challenges" for ::1 at 2015-02-08 21:27:46 +1100
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges"
+  Rendered challenges/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-02-08 21:27:48 +1100
+Processing by PagesController#home as HTML
+  Rendered pages/home.haml within layouts/application (0.1ms)
+Completed 200 OK in 46ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/challenges" for ::1 at 2015-02-08 21:27:53 +1100
+Processing by ChallengesController#index as HTML
+  [1m[36mChallenge Load (0.5ms)[0m  [1mSELECT "challenges".* FROM "challenges"[0m
+  Rendered challenges/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/challenges/new" for ::1 at 2015-02-08 21:27:54 +1100
+Processing by ChallengesController#new as HTML
+  Rendered challenges/_form.html.erb (2.4ms)
+  Rendered challenges/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/challenges" for ::1 at 2015-02-08 21:27:55 +1100
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges"
+  Rendered challenges/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 40ms (Views: 39.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/challenges/7" for ::1 at 2015-02-08 21:28:01 +1100
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mChallenge Load (0.4ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered challenges/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 43ms (Views: 38.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/challenges/7/edit" for ::1 at 2015-02-08 21:28:03 +1100
+Processing by ChallengesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mChallenge Load (0.4ms)[0m  SELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1  [["id", 7]]
+  Rendered challenges/_form.html.erb (3.6ms)
+  Rendered challenges/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 47ms (Views: 43.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/challenges/7" for ::1 at 2015-02-08 21:28:06 +1100
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered challenges/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 23.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/challenges/7" for ::1 at 2015-02-08 21:28:08 +1100
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mChallenge Load (0.4ms)[0m  SELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1  [["id", 7]]
+  Rendered challenges/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 33ms (Views: 29.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/challenges/7" for ::1 at 2015-02-08 21:28:09 +1100
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mChallenge Load (0.3ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered challenges/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 59ms (Views: 54.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/challenges/7" for ::1 at 2015-02-08 21:41:34 +1100
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mChallenge Load (0.9ms)[0m  SELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT 1  [["id", 7]]
+  Rendered challenges/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 146ms (Views: 125.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-02-08 21:43:39 +1100
+Processing by PagesController#home as HTML
+  Rendered pages/home.haml within layouts/application (0.6ms)
+Completed 200 OK in 179ms (Views: 177.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/challenges" for ::1 at 2015-02-08 21:43:41 +1100
+Processing by ChallengesController#index as HTML
+  [1m[36mChallenge Load (0.8ms)[0m  [1mSELECT "challenges".* FROM "challenges"[0m
+  Rendered challenges/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 85ms (Views: 83.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/challenges/new" for ::1 at 2015-02-08 21:43:42 +1100
+Processing by ChallengesController#new as HTML
+  Rendered challenges/_form.html.erb (4.5ms)
+  Rendered challenges/new.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 82ms (Views: 81.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-02-08 21:43:44 +1100
+Processing by UsersController#new as HTML
+  Rendered users/new.haml within layouts/application (2.3ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-02-08 21:43:45 +1100
+Processing by SessionController#new as HTML
+  Rendered session/new.haml within layouts/application (1.6ms)
+Completed 200 OK in 51ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-02-08 21:43:49 +1100
+Processing by UsersController#new as HTML
+  Rendered users/new.haml within layouts/application (1.7ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-02-08 21:45:22 +1100
+Processing by SessionController#new as HTML
+  Rendered session/new.haml within layouts/application (3.2ms)
+Completed 200 OK in 88ms (Views: 86.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-02-08 22:06:25 +1100
+Processing by SessionController#new as HTML
+  Rendered session/new.haml within layouts/application (12.0ms)
+Completed 200 OK in 272ms (Views: 267.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-02-08 22:09:30 +1100
+Processing by SessionController#new as HTML
+  Rendered session/new.haml within layouts/application (14.9ms)
+Completed 200 OK in 165ms (Views: 160.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-02-08 22:09:56 +1100
+Processing by SessionController#new as HTML
+  Rendered session/new.haml within layouts/application (4.8ms)
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/challenges" for ::1 at 2015-02-08 22:11:12 +1100
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (2.3ms)[0m  SELECT "challenges".* FROM "challenges"
+  Rendered challenges/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 143ms (Views: 138.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/challenges/new" for ::1 at 2015-02-08 22:11:13 +1100
+Processing by ChallengesController#new as HTML
+  Rendered challenges/_form.html.erb (5.2ms)
+  Rendered challenges/new.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 59ms (Views: 56.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-02-08 22:11:15 +1100
+Processing by UsersController#new as HTML
+  Rendered users/new.haml within layouts/application (4.5ms)
+Completed 200 OK in 60ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-02-08 22:11:16 +1100
+Processing by SessionController#new as HTML
+  Rendered session/new.haml within layouts/application (1.4ms)
+Completed 200 OK in 71ms (Views: 70.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-02-08 22:11:18 +1100
+Processing by PagesController#home as HTML
+  Rendered pages/home.haml within layouts/application (0.2ms)
+Completed 200 OK in 31ms (Views: 30.6ms | ActiveRecord: 0.0ms)

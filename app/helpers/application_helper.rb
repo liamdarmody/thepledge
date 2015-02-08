@@ -1,6 +1,8 @@
 module ApplicationHelper
   def nav_menu
     links = "<li>#{ link_to('Home', root_path) }</li>"
+    links += "<li>#{ link_to('Challenges', challenges_path) }</li>"
+    links += "<li>#{ link_to('New Challenge', new_challenge_path) }</li>"
 
     if @current_user.present?
 

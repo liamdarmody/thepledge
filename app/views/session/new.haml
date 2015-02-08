@@ -1,7 +1,7 @@
 %h1 Log in
 = form_tag login_path do
   = label_tag :email
-  = text_field_tag :email, nil, :autofocus => true
+  = text_field_tag :email, nil, :autofocus => true, :class => 'form-control', :id => 'inputEmail'
   = label_tag :password
-  = password_field_tag :password
-  = submit_tag 'Login'
+  = password_field_tag :password, :class => 'form-control'
+  = submit_tag 'Login', :class => 'btn btn-primary', :id => 'inputPassword'
