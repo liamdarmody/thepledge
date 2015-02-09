@@ -1,7 +1,12 @@
+%h2= flash[:error] if flash[:error].present?
+
 %h1 Log in
 = form_tag login_path do
-  = label_tag :email
-  = text_field_tag :email, nil, :autofocus => true, :class => 'form-control', :id => 'inputEmail'
-  = label_tag :password
-  = password_field_tag :password, :class => 'form-control'
-  = submit_tag 'Login', :class => 'btn btn-primary', :id => 'inputPassword'
+  %div.form-group
+    = label_tag :email
+    = text_field_tag :email, nil, :autofocus => true, :class => 'form-control', :id => 'inputEmail'
+
+    = label_tag :password
+    = password_field_tag :password, :class => 'form-control'
+
+  = submit_tag 'Login', :class => 'btn btn-primary'

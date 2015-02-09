@@ -6,8 +6,17 @@ class ChallengesController < ApplicationController
   end
 
   def create
-    challenge = Challenge.create challenge_params
-    redirect_to challenge
+    # challenge = Challenge.create challenge_params
+    # redirect_to challenge
+
+
+    challenge = Challenge.new challenge_params
+    if challenge.save
+      challenge.update(:user_id => @current_user.id)
+      redirect_to challenge
+    else
+      render :new
+    end
   end
 
   def new
