@@ -1,13 +1,15 @@
 <h1>Pledge</h1>
 
 <%= form_for [@challenge,@pledge], :html => {:class => 'sm-col-6'} do |f| %>
-
+  
+  <div class="form-group">
     <%= f.label :amount %>
     <%= f.text_field :amount, :autofocus => true, :class => 'form-control' %>
   
     <%= f.label :reason %>
     <%= f.text_area :reason, :class => 'form-control' %>
+  </div>
 
-    <%= f.submit :class => 'btn btn-primary' %>
+  <%= f.submit :class => 'btn btn-primary' %>
 
 <% end %>

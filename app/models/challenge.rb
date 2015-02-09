@@ -21,5 +21,10 @@
 #
 
 class Challenge < ActiveRecord::Base
+  belongs_to :user
   has_many :pledges
+
+  def is_owner?(user)
+    self.user_id == user.try(:id)
+  end
 end

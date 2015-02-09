@@ -1,15 +1,11 @@
 class ChallengesController < ApplicationController
-  before_action :logged_in?, :only => [:new]
+  before_action :logged_in?, :only => [:new, :edit, :delete]
 
   def index
     @challenges = Challenge.all
   end
 
   def create
-    # challenge = Challenge.create challenge_params
-    # redirect_to challenge
-
-
     challenge = Challenge.new challenge_params
     if challenge.save
       challenge.update(:user_id => @current_user.id)
@@ -23,8 +19,12 @@ class ChallengesController < ApplicationController
     @challenge = Challenge.new
   end
 
-  def edit
+  def edit 
     @challenge = Challenge.find params[:id]
+    
+    unless @challenge.is_owner?(@current_user)
+      redirect_to root_path
+    end
   end
 
   def show
@@ -33,12 +33,22 @@ class ChallengesController < ApplicationController
 
   def update
     challenge = Challenge.find params[:id]
+    
+    unless @challenge.is_owner?(@current_user)
+      redirect_to root_path
+    end
+    
     challenge.update challenge_params
     redirect_to challenge
   end
 
   def destroy
     challenge = Challenge.find params[:id]
+    
+    unless @challenge.is_owner?(@current_user)
+      redirect_to root_path
+    end
+    
     challenge.destroy
     redirect_to challenges_path
   end
