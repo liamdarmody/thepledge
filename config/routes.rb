@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root :to => 'pages#home'
   
   resources :users, :only => [:new, :create, :index]
+  get '/signup_login' => 'users#signup_login'
   
   resources :challenges do
     resources :pledges, :only => [:new, :create, :index]

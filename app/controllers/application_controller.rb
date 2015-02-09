@@ -14,6 +14,6 @@ class ApplicationController < ActionController::Base
   end
 
   def logged_in?
-    redirect_to(login_path) unless @current_user.present?
+    redirect_to(signup_login_path) unless @current_user.present?
   end
 end

@@ -7,8 +7,11 @@
 
 = form_for @user do |f|
   %div.form-group
+    = f.label :name
+    = f.text_field :name, :autofocus => true, :required => true, :class => 'form-control'
+
     = f.label :email
-    = f.text_field :email, :autofocus => true, :required => true, :class => 'form-control'
+    = f.text_field :email, :required => true, :class => 'form-control'
 
     = f.label :password
     = f.password_field :password, :required => true, :class => 'form-control'

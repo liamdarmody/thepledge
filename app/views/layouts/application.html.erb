@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Pledge</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
-<nav>
-  <ul>
-    <%== nav_menu %>
-  </ul>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <%== nav_menu %>
+    </ul>
+  </div>
 </nav>
 
-<div class="container">
+<hr>
+
+<div class="container main_container">
   <%= yield %>
 </div>
+
+<hr>
 
 <footer class="footer">
   <p>Copyright The Pledge</p>

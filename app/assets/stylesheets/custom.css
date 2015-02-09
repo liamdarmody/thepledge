@@ -1,0 +1,21 @@
+body {
+  background-color: #f5f5f5;
+  color: #565a5c;
+}
+
+nav {
+  background-color: white;
+  color: #565a5c;
+}
+
+.main_container {
+  margin-top: 50px;
+}
+
+.signup_login {
+  background-color: #fff;
+  border: 1px solid #dce0e0;
+  height: 500px;
+  display: block;
+  padding: 10%;
+}
