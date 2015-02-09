@@ -1,22 +1,23 @@
 class PledgesController < ApplicationController
-  def index
+  def new
+    @pledge = Pledge.new
   end
 
   def create
+    @pledge = Pledge.new pledge_params
+    if @pledge.save
+      redirect_to challenge_path
+    else
+      render :new
+    end
   end
 
-  def new
+  def index
+    @pledges = Pledge.all
   end
 
-  def edit
-  end
-
-  def show
-  end
-
-  def update
-  end
-
-  def destroy
+  private
+  def pledge_params
+    params.require(:pledge).permit(:amount, :reason)
   end
 end

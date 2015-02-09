@@ -1,27 +1,26 @@
 <%= form_for @challenge, :html => {:class => 'sm-col-6'} do |f| %>
-  
-  <div>
+
     <%= f.label :title %>
-    <%= f.text_field :title, :autofocus => true %>
+    <%= f.text_field :title, :autofocus => true, :class => 'form-control' %>
   
     <%= f.label :description %>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :class => 'form-control' %>
   
     <%= f.label :nominee_name %>
-    <%= f.text_field :nominee_name %>
+    <%= f.text_field :nominee_name, :class => 'form-control' %>
   
     <%= f.label :nominee_email %>
-    <%= f.text_field :nominee_email %>
+    <%= f.text_field :nominee_email, :class => 'form-control' %>
 
     <%= f.label :banner_image %>
-    <%= f.url_field :banner_image %>
+    <%= f.url_field :banner_image, :class => 'form-control' %>
 
     <%= f.label :cause %>
-    <%= f.text_field :cause %>
+    <%= f.text_field :cause, :class => 'form-control' %>
 
     <%= f.label :target %>
-    <%= f.text_field :target %>
+    <%= f.text_field :target, :class => 'form-control' %>
 
-  <%= f.submit :class => 'h3 button button-big mb4 button-blue' %>
+    <%= f.submit :class => 'btn btn-primary' %>
 
 <% end %>

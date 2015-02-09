@@ -1,4 +1,6 @@
 class ChallengesController < ApplicationController
+  before_action :logged_in?, :only => [:new]
+
   def index
     @challenges = Challenge.all
   end
