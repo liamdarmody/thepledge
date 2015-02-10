@@ -1,0 +1,10 @@
+<h1><%= @user.name %></h1>
+<p>
+  <% if @user == @current_user %>
+
+    <%= link_to 'Edit Profile', edit_user_path(@user) %>
+
+  <% end %>
+</p>
+
+<%= image_tag(@user.profile_image, :class => 'profile_image') %>

@@ -28,6 +28,8 @@ gem 'rails_12factor', group: :production
 gem 'haml'
 gem 'bootstrap-sass'
 
+gem 'mandrill-api'
+
 group :development do
   gem 'pry-rails'
   gem 'pry-stack_explorer'

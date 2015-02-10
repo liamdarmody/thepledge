@@ -17,6 +17,8 @@ class User < ActiveRecord::Base
 
   validates :name, :presence => true, :uniqueness => true
 
+  validates :password, presence: true, length: { minimum: 6 }, on: :create
+
   has_many :challenges
   has_many :pledges
 end

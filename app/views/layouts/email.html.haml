@@ -1,0 +1,12 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %title= content_for?(:title) ? yield(:title) : "FitUsIn"
+    = render "layouts/email/styles"
+  %body{:bgcolor => "#f5f6f6"}
+    = render 'layouts/email/pre_header'
+    = render 'layouts/email/header'
+    = yield
+    = render 'layouts/email/sub_footer'
+    = render 'layouts/email/footer'

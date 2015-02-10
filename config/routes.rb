@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root :to => 'pages#home'
   
-  resources :users, :only => [:new, :create, :index]
+  resources :users, :except => [:destroy]
   get '/signup_login' => 'users#signup_login'
   
   resources :challenges do
