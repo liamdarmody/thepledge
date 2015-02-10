@@ -15,3 +15,10 @@
 </div>
 
 <%= image_tag(@challenge.banner_image, :class => 'challenge_banner') %>
+
+<h2>Pledges</h2>
+<% @challenge.pledges.each do |pledge| %>
+  <div>
+    $<%= pledge.amount %> (<%= pledge.user.name %>: <%= pledge.reason %>)
+  </div>
+<% end %>
