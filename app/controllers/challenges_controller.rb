@@ -5,6 +5,10 @@ class ChallengesController < ApplicationController
     @challenges = Challenge.all
   end
 
+  def my_index
+    @challenges = Challenge.where :user_id => @current_user.id
+  end
+
   def create
     challenge = Challenge.new challenge_params
     if challenge.save

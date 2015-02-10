@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resources :pledges, :only => [:new, :create, :index]
   end
 
+  get '/my_challenges' => 'challenges#my_index'
+
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
