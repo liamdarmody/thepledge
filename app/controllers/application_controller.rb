@@ -14,6 +14,9 @@ class ApplicationController < ActionController::Base
   end
 
   def logged_in?
-    redirect_to(signup_login_path) unless @current_user.present?
+    unless @current_user.present?
+      session[:destination] = request.env["PATH_INFO"]
+      redirect_to(signup_login_path)
+    end
   end
 end

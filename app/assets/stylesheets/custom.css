@@ -19,3 +19,11 @@ nav {
   display: block;
   padding: 10%;
 }
+
+.challenge_thumb {
+  max-width: 10em;
+}
+
+.challenge_banner {
+  max-width: 100%;
+}

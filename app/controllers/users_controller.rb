@@ -20,7 +20,7 @@ class UsersController < ApplicationController
   end
 
   def signup_login
-    session[:destination]=new_challenge_path
+    session[:destination] ||= request.env["HTTP_REFERER"]
   end
 
   private

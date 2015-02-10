@@ -1,9 +1,0 @@
-<h1>Challenges</h1>
-
-<% @challenges.each do |challenge| %>
-  <div>
-    <p><%= link_to(image_tag(challenge.banner_image, :class => 'thumb'), challenge) %></p>
-    <p><%= link_to(challenge.title, challenge) %></p>
-    <p><%= challenge.description %></p>
-  </div>
-<% end %>
