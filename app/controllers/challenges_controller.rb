@@ -1,5 +1,5 @@
 class ChallengesController < ApplicationController
-  before_action :logged_in?, :only => [:new, :edit, :delete]
+  before_action :logged_in?, :only => [:new, :create, :edit, :update, :destroy]
 
   def index
     @challenges = Challenge.all

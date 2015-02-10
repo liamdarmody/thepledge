@@ -1,5 +1,5 @@
 class PledgesController < ApplicationController
-  before_action :logged_in?, :only => [:new]
+  before_action :logged_in?, :only => [:new, :create]
 
   def new
     @challenge = Challenge.find params[:challenge_id]
