@@ -1,0 +1,20 @@
+- content_for :one_column_title do
+  %p
+    Hi #{@challenge.nominee_name.strip},
+  %br/
+  %p We’re getting in touch to let you know that you've been nominated for a challenge to raise money for charity.
+
+- content_for :one_column_title, flush: true do
+  %p
+    = @challenge.user_id.name
+    has nominated you for the following challenge:
+- content_for :one_column_text, flush: true do
+  %strong #{@challenge.title}
+  %p #{@challenge.description}
+
+= render 'layouts/email/one_column'
+= render 'layouts/email/divider_image'
+- content_for :one_column_title, flush: true do
+  = link_to "SUBMIT FREE QUOTE", enquiry_url(key: @enquiry.key, id: @enquiry.id), style: 'font-size: 18px;'
+- content_for :one_column_text, flush: true do "" end
+= render 'layouts/email/one_column'

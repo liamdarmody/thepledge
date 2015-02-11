@@ -21,6 +21,8 @@
 #
 
 class Challenge < ActiveRecord::Base
+  mount_uploader :banner_image, BannerImageUploader
+
   belongs_to :user
   has_many :pledges
 

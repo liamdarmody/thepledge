@@ -36,14 +36,16 @@ class ChallengesController < ApplicationController
   end
 
   def update
-    challenge = Challenge.find params[:id]
-    
+    @challenge = Challenge.find params[:id]
     unless @challenge.is_owner?(@current_user)
       redirect_to root_path
     end
     
-    challenge.update challenge_params
-    redirect_to challenge
+    if @challenge.update challenge_params
+      redirect_to @challenge
+    else
+      render :edit
+    end
   end
 
   def destroy

@@ -7,4 +7,4 @@
   <% end %>
 </p>
 
-<%= image_tag(@user.profile_image, :class => 'profile_image') %>
+<%= image_tag @user.profile_image if @user.profile_image? %>

@@ -14,7 +14,7 @@
   <p><%= link_to('Make a Pledge', new_challenge_pledge_path(:challenge_id => @challenge.id)) %></p>
 </div>
 
-<%= image_tag(@challenge.banner_image, :class => 'challenge_banner') %>
+<%= image_tag @challenge.banner_image_url if @challenge.banner_image? %>
 
 <h2>Pledges</h2>
 <% @challenge.pledges.each do |pledge| %>

@@ -12,8 +12,8 @@
     = f.text_field :email, :required => true, :class => 'form-control'
 
     = f.label :profile_image
-    = f.url_field :profile_image, :class => 'form-control'
-    
+    = f.file_field :profile_image
+
     - if @user.new_record?
       = f.label :password
       = f.password_field :password, :required => true, :class => 'form-control'
