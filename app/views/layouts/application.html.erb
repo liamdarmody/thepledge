@@ -6,21 +6,22 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body id="page-top" class="index">
 
 <!-- Navigation -->
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="nav navbar navbar-default navbar-fixed-top">
       <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header page-scroll">
+          <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                   <span class="sr-only">Toggle navigation</span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand brand-colour" href="/">ThePledge.com.au</a>
+              <a class="navbar-brand" href="/">ThePledge.com.au</a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
@@ -34,16 +35,12 @@
       <!-- /.container-fluid -->
   </nav>
 
-<hr>
-
-<div class="container main_container">
+<div class="main_container">
   <%= yield %>
 </div>
 
-<hr>
-
 <footer class="footer">
-  <p>Copyright The Pledge</p>
+  <p>&#169; Copyright The Pledge</p>
 </footer>
 
 </body>
