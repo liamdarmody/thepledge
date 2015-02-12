@@ -41,6 +41,9 @@ gem 'mini_magick'
 # cloud storage
 gem 'cloudinary'
 
+# env setup for mandrill
+gem 'dotenv-rails', :groups => [:development, :test]
+
 # mandrill mailer
 gem 'mandrill-api'
 

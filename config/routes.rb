@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/signup_login' => 'users#signup_login'
   
   resources :challenges do
+    get '/accept' => 'challenges#accept'
     resources :pledges, :only => [:new, :create, :index]
   end
 

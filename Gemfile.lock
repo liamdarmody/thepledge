@@ -79,6 +79,9 @@ GEM
     columnize (0.9.0)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
+    dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     erubis (2.7.0)
     excon (0.44.1)
     execjs (2.3.0)
@@ -217,6 +220,7 @@ DEPENDENCIES
   carrierwave
   cloudinary
   coffee-rails (~> 4.1.0)
+  dotenv-rails
   haml
   jbuilder (~> 2.0)
   jquery-rails

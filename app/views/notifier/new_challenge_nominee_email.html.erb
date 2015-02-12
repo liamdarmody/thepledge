@@ -1,0 +1,15 @@
+<p>Hi <%= @challenge.nominee_name %>,</p>
+<p>You've been nominated for a challenge to raise money for <%= @challenge.cause %> on ThePledge.com.au.</p>
+<h1>All funds raised on ThePledge.com.au go to charity.</h1>
+<h2>We crowdfund charitable challenges.</h2>
+<p>Over the coming days, people will pledge for you to complete the challenge. We don't release funds to the nominated charity until you Accept and Complete the challenge.</p>
+<table>
+  <tr>
+    <td class="padding">
+      <p><a href="<%= challenge_accept_url(@challenge.id) %>" class="btn-primary">Accept Challenge</a></p>
+    </td>
+  </tr>
+</table>
+<p>Be a good sport and Accept the challenge.</p>
+<p>Thanks, have a lovely day.</p>
+<p><a href="http://www.thepledge.com.au">ThePledge.com.au</a></p>

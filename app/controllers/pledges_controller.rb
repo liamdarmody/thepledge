@@ -7,10 +7,12 @@ class PledgesController < ApplicationController
   end
 
   def create
+    
     @challenge = Challenge.find params[:challenge_id]
-    @pledge = Pledge.new pledge_params
+    @pledge = @challenge.pledges.new pledge_params
     if @pledge.save
-      @pledge.update(:user_id => @current_user.id, :challenge_id => @challenge.id)
+      @pledge.update(:user_id => @current_user.id)
+      Notifier.new_pledge_nominee_email(@pledge).deliver_now
       redirect_to challenge_path(@challenge)
     else
       render :new
