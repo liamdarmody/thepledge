@@ -1,7 +1,6 @@
 module ApplicationHelper
   def nav_menu
-    links = "<li>#{ link_to('ThePledge.com.au', root_path) }</li>"
-    links += "<li>#{ link_to('Start a Challenge', new_challenge_path) }</li>"
+    links = "<li>#{ link_to('Start a Challenge', new_challenge_path) }</li>"
     links += "<li>#{ link_to('Browse', challenges_path) }</li>"
 
     if @current_user.present?
