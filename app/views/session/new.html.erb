@@ -1,0 +1,22 @@
+<h2>
+  <%= flash[:error] if flash[:error].present? %>
+</h2>
+
+<!-- Page Header -->
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">Log In
+        <small>Do Your Part</small>
+    </h1>
+  </div>
+</div>
+
+<%= form_tag login_path do %>
+  <div class="form-group">
+    <%= label_tag :email %>
+    <%= text_field_tag :email, nil, :autofocus => true, :class => 'form-control', :id => 'inputEmail' %>
+    <%= label_tag :password %>
+    <%= password_field_tag :password, nil, :class => 'form-control' %>
+  </div>
+  <%= submit_tag 'Login', :class => 'btn btn-primary' %>
+<% end %>

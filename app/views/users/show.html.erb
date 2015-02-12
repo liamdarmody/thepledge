@@ -1,12 +1,27 @@
-<h1><%= @user.name %></h1>
-<p>
-  <% if @user == @current_user %>
+<!-- Page Header -->
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">User Profile
+        <small><%= @user.name %></small>
+    </h1>
+    <p>
+      <% if @user == @current_user %>
+        <%= link_to 'Edit Profile', edit_user_path(@user) %>
+      <% end %>
+    </p>
+  </div>
+</div>
 
-    <%= link_to 'Edit Profile', edit_user_path(@user) %>
-
-  <% end %>
-</p>
-
-<div>
-  <%= image_tag @user.profile_image if @user.profile_image? %>
+<!-- User Profile -->
+<div class="container">
+  <div class="row">
+    <div class="span2">
+      <%= image_tag @user.profile_image, :class => "img-rounded img-responsive" if @user.profile_image? %>
+    </div>
+    <div class="span4">
+      <blockquote>
+        <p><%= @user.name %></p>
+      </blockquote>
+    </div>
+  </div>
 </div>

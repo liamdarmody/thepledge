@@ -1,5 +1,15 @@
-<h1>Pledge Payment</h1>
+<!-- Page Header -->
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">Payment Confirmation
+        <small><%= @challenge.cause %> Thanks You For Your Pledge</small>
+    </h1>
+  </div>
+</div>
+
 <p><strong>Challenge:</strong> <%= @challenge.title %></p>
+<p><strong>Nominee:</strong> <%= @challenge.nominee_name %></p>
+<p><strong>Cause:</strong> <%= @challenge.cause %></p>
 <p><strong>Pledge Amount:</strong> $<%= @pledge.amount %></p>
 
 <form action="/challenges/<%= @challenge.id %>/pledges/<%= @pledge.id %>/pay" method="POST">
