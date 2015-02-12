@@ -1,11 +1,24 @@
-<h1>Pledge</h1>
+<!-- Page Header -->
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">Make a Pledge
+        <small>For the <%= @challenge.title %></small>
+    </h1>
+  </div>
+</div>
 
+<!-- Pledge Creation -->
 <%= form_for [@challenge,@pledge], :html => {:class => 'sm-col-6'} do |f| %>
   
   <div class="form-group">
-    <%= f.label :amount %>
-    <%= f.text_field :amount, :autofocus => true, :class => 'form-control' %>
-  
+    
+    <%= f.label :pledge %>
+    <div class="input-group">
+      <div class="input-group-addon">$</div>
+      <%= f.text_field :amount, :autofocus => true, :class => 'form-control', :placeholder => "Amount" %>
+      <div class="input-group-addon">.00</div>
+    </div>
+    
     <%= f.label :reason %>
     <%= f.text_area :reason, :class => 'form-control' %>
   </div>

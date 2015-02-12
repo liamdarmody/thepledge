@@ -5,7 +5,7 @@
         <small><%= @user.name %></small>
     </h1>
     <p>
-      <% if @user == @current_user %>
+      <% if @user == @current_user || @current_user.is_admin? %>
         <%= link_to 'Edit Profile', edit_user_path(@user) %>
       <% end %>
     </p>

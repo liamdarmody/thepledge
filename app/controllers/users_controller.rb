@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   def edit 
     @user = User.find params[:id]
     
-    unless @user == @current_user
+    unless @user == @current_user || @current_user.is_admin?
       redirect_to root_path
     end
   end
