@@ -14,4 +14,8 @@
 class Pledge < ActiveRecord::Base
   belongs_to :user
   belongs_to :challenge
+
+  def is_owner?(user)
+    self.user_id == user.try(:id)
+  end
 end

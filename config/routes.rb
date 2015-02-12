@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   
   resources :challenges do
     get '/accept' => 'challenges#accept'
-    resources :pledges, :only => [:new, :create, :index]
+    resources :pledges, :only => [:new, :create, :index] do
+      get '/pay' => 'pledges#pay'
+      post '/pay' => 'pledges#charge'
+    end
   end
 
   get '/my_challenges' => 'challenges#my_index'

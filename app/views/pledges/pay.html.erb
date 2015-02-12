@@ -1,0 +1,16 @@
+<h1>Pledge Payment</h1>
+<p><strong>Challenge:</strong> <%= @challenge.title %></p>
+<p><strong>Pledge Amount:</strong> $<%= @pledge.amount %></p>
+
+<form action="/challenges/<%= @challenge.id %>/pledges/<%= @pledge.id %>/pay" method="POST">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_TOI2HcX8MCjx1Nvn90iwNWK4"
+    data-amount="<%= @pledge.amount %>00"
+    data-name="The Pledge"
+    data-description="$<%= @pledge.amount %> Pledge for <%= @challenge.title %>"
+    data-image="<%= asset_path 'thepledge-icon.png' %>"
+    data-email="<%= @user.email %>">
+  </script>
+</form>

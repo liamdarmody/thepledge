@@ -16,6 +16,9 @@
 
 <%= image_tag @challenge.banner_image_url if @challenge.banner_image? %>
 
+<h2>Amount Raised</h2>
+$<%= @challenge.pledges.sum :amount %>
+
 <h2>Pledges</h2>
 <% @challenge.pledges.each do |pledge| %>
   <div>
