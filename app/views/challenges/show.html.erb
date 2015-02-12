@@ -18,8 +18,9 @@
 </p>
 
 <div>
-  <!-- need to add user_id.name here -->
-  <p><%= @challenge.description %></p>
+  <p><strong>Nominee:</strong> <%= @challenge.nominee_name %></p>
+  <p><strong>Cause:</strong> <%= @challenge.cause %></p>
+  <p><strong>Description:</strong> <%= @challenge.description %></p>
   <a href="<%= new_challenge_pledge_path(:challenge_id => @challenge.id) %>" class="btn btn-xl">Make a Pledge</a>
 </div>
 
