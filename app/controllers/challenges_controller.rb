@@ -34,7 +34,7 @@ class ChallengesController < ApplicationController
   def edit 
     @challenge = Challenge.find params[:id]
     
-    unless @challenge.is_owner?(@current_user)
+    unless @challenge.is_owner?(@current_user) || @current_user.is_admin?
       redirect_to root_path
     end
   end
@@ -45,7 +45,7 @@ class ChallengesController < ApplicationController
 
   def update
     @challenge = Challenge.find params[:id]
-    unless @challenge.is_owner?(@current_user)
+    unless @challenge.is_owner?(@current_user) || @current_user.is_admin?
       redirect_to root_path
     end
     

@@ -8,7 +8,7 @@
 </div>
 
 <p>
-  <% if @challenge.is_owner?(@current_user) %>
+  <% if @challenge.is_owner?(@current_user) || @current_user.is_admin? %>
 
     <%= link_to 'Edit Challenge', edit_challenge_path(@challenge) %>
     <em>or</em>
