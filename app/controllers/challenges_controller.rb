@@ -59,7 +59,7 @@ class ChallengesController < ApplicationController
   def destroy
     challenge = Challenge.find params[:id]
     
-    unless @challenge.is_owner?(@current_user)
+    unless @challenge.is_owner?(@current_user) || @current_user.is_admin?
       redirect_to root_path
     end
     
