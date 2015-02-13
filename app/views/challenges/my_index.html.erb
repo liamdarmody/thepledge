@@ -8,14 +8,16 @@
 </div>
 
 <!-- Challenges -->
-<div class="row">
-  <% @challenges.each do |challenge| %>
-    <div class="col-md-4 portfolio-container">
-        <%= link_to(image_tag(challenge.banner_image, :class => 'img-responsive'), challenge) %>
-        <h3>
-            <%= link_to(challenge.title, challenge) %>
-        </h3>
-        <p><%= challenge.description %></p>
-    </div>
-  <% end %>
-</div>
+<% @challenges.in_groups_of(3) do |challenge| %>
+  <div class="row">
+    <% challenge.compact.each do |challenge| %>
+      <div class="col-md-4 portfolio-container">
+          <%= link_to(image_tag(challenge.banner_image, :class => 'img-responsive'), challenge) %>
+          <h3>
+              <%= link_to(challenge.title, challenge) %>
+          </h3>
+          <p><%= challenge.description %></p>
+      </div>
+    <% end %>
+  </div>
+<% end %>
