@@ -8,12 +8,17 @@
 </div>
 
 <p>
-  <% if @challenge.is_owner?(@current_user) || @current_user.is_admin? %>
+  
+  <% if @current_user.present? %>
 
-    <%= link_to 'Edit Challenge', edit_challenge_path(@challenge) %>
-    <em>or</em>
-    <%= link_to 'Delete Challenge', @challenge, :method => 'delete', :data => { :confirm => "Are you sure?" } %>
+    <% if @challenge.is_owner?(@current_user) || @current_user.is_admin? %>
 
+      <%= link_to 'Edit Challenge', edit_challenge_path(@challenge) %>
+      <em>or</em>
+      <%= link_to 'Delete Challenge', @challenge, :method => 'delete', :data => { :confirm => "Are you sure?" } %>
+
+    <% end %>
+    
   <% end %>
 </p>
 
